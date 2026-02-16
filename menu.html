@@ -2,28 +2,61 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	  <link rel="stylesheet" href="styles.css">
 </head>
-<body bgcolor="yellow" text="000000">
+<body bgcolor="#CFF9FF" text="000000">
 	Seleccione la opción deseada:
 	<br>
-	<ul>
-	<li><a href="inicio.html" target="der">Inicio</a></li>
-	<li><a href="plantilla.html" target="der">Práctica 1</a></li>
-	<li><a href="practica2.html" target="der">Práctica 2</a></li>
-	<li><a href="practica3.html" target="der">Práctica 3</a></li>
-	<li><a href="practica4.html" target="der">Práctica 4</a></li>
-	<li><a href="practica5.html" target="der">Práctica 5</a></li>
-	<li><a href="practica6.html" target="der">Práctica 6</a></li>
-	<li><a href="practica7.html" target="der">Práctica 7</a></li>
-	<li><a href="practica8.html" target="der">Práctica 8</a></li>
-	<li><a href="practica9.html" target="der">Práctica 9</a></li>
-	<li><a href="practica10.html" target="der">Práctica 10</a></li>
-	<li><a href="practica11.html" target="der">Práctica 11</a></li>
-	<li><a href="practica12.html" target="der">Práctica 12</a></li>
-	<li><a href="practica13.html" target="der">Práctica 13</a></li>
-	<li><a href="practica14.html" target="der">Práctica 14</a></li>
-	<li><a href="practica15.html" target="der">Práctica 15</a></li>
-	<li><a href="practica16.html" target="der">Práctica 16</a></li>
-	</ul>
+	<nav>
+  <ul class="menu">
+  	<li>
+      <a href="inicio.html" class="menu-item" target="der">Inicio</a>
+    </li>
+    <br>
+    <li>
+    	<button class="btn-menu" onclick="toggleMenu(this)">
+        Prácticas ▼
+      </button>
+      <ul class="submenu" id="submenu">
+        <li><a href="plantilla.html" target="der">Práctica 1</a></li>
+		<li><a href="practica2.html" target="der">Práctica 2</a></li>
+		<li><a href="practica3.html" target="der">Práctica 3</a></li>
+		<li><a href="practica4.html" target="der">Práctica 4</a></li>
+		<li><a href="practica5.html" target="der">Práctica 5</a></li>
+		<li><a href="practica6.html" target="der">Práctica 6</a></li>
+		<li><a href="practica7.html" target="der">Práctica 7</a></li>
+		<li><a href="practica8.html" target="der">Práctica 8</a></li>
+		<li><a href="practica9.html" target="der">Práctica 9</a></li>
+		<li><a href="practica10.html" target="der">Práctica 10</a></li>
+		<li><a href="practica11.html" target="der">Práctica 11</a></li>
+		<li><a href="practica12.html" target="der">Práctica 12</a></li>
+		<li><a href="practica13.html" target="der">Práctica 13</a></li>
+		<li><a href="practica14.html" target="der">Práctica 14</a></li>
+		<li><a href="practica15.html" target="der">Práctica 15</a></li>
+		<li><a href="practica16.html" target="der">Práctica 16</a></li>
+      </ul>
+    </li>
+    <br>
+    <li class="menu-combo">
+  		<li><a target="der" href="inicio/princ.html" class="menu-item">Proyecto</a>
+  		<button class="menu-arrow" onclick="toggleMenu(this)">▼</button>
+      <ul class="submenu" id="submenu">
+        <li><a href="inicio/inicio.html" target="inicio">Inicio</a></li>
+        <li><a href="personal.html" target="inicio">Personal</a></li>
+        <li><a href="carrera.html" target="inicio">Carrera</a></li>
+        <li><a href="tecMonterrey.html" target="inicio">Tec de Monterrey</a></li>
+        <li><a href="tecMilenio.html" target="inicio">TecMilenio</a></li>
+      </ul></li>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu(button) {
+    const submenu = button.nextElementSibling;
+    submenu.classList.toggle("mostrar");
+  }
+</script>
+
 </body>
 </html>

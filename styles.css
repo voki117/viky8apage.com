@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Botón principal */
+.btn-menu {
+  background-color: #CFF9FF;
+  color: black;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-combo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  list-style: disc;      /* 🔹 punto clásico */
+  list-style-position: inside;
+}
+
+.menu-arrow {
+  background-color: #CFF9FF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.menu-arrow:hover {
+  background-color: #34495e;
+}
+
+.btn-menu:hover {
+  background-color: #34495e;
+}
+
+/* Submenú oculto */
+.submenu {
+  list-style: disc;      /* 🔹 punto clásico */
+  list-style-position: inside;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #CFF9FF;
+  width: 180px;
+}
+
+/* Submenú visible */
+.submenu.mostrar {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #3e5871;
+}
+
+.menu-item {
+  background-color: #CFF9FF;
+  color: black;
+  padding: 12px 18px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+
+  /* 🔑 Esto es lo que faltaba */
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+/* Hover uniforme */
+.menu-item:hover {
+  background-color: #34495e;
+}
